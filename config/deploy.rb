@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.6.1'
 
-set :repo_url, 'git@github.com:nclud/gitrepo'
+set :repo_url, 'git@github.com:nclud/skeleton.git'
 
 set :user, ENV["USER"]
 set :tmp_dir, "/tmp/#{fetch(:user)}/tmp"
