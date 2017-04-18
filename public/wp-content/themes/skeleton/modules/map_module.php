@@ -16,7 +16,7 @@
 		//$project_size = get_field('project_size');
 		//$service = get_field('service_provided');
 		$location = get_field('city').", ".get_field('state');
-		$projects[]=array($project_name,$lat,$long,$project_size,$service,$location,$project_link);
+		$projects[]=array($project_name,$lat,$long,$location,$project_link);
 
 	endwhile;
 

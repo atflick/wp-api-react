@@ -23,7 +23,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (= 3.6.0)
+  capistrano (= 3.6)
 
 BUNDLED WITH
    1.14.6

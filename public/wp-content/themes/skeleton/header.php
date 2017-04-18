@@ -96,11 +96,6 @@
 						<?php if (isset($post->post_type)) if ($post->post_type != "member"){ ?>
 							<div class="flex-container">
 								<div class="flex-col flex-2-3 flex-padding">
-									<?php if(isset($post->ID)) {
-										$terms = wp_get_post_terms($post->ID,'section','');
-										foreach ($terms as $term)
-											echo '<span class="page-section">'.$term->name.'</span>'; 
-									} ?>
 									<?php if (isset($post->post_type)) if ($post->post_type != "members") { ?>
 										<h1 class="hero-title"><?php the_title(); ?></h1>
 									<?php } ?>

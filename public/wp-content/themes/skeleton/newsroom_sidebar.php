@@ -13,23 +13,6 @@
 
 		</section>
 
-	<?php } else { ?>
-
-		<?php if ( count( $children ) > 0) { ?>
-
-			<section class="sidebar-right">
-				<div class="padding-4">
-					<?php	echo '<h6>'; echo the_title(); echo '</h6>';
-							wp_list_pages(array(
-							'child_of' => $post->ID,
-							'title_li' => "",
-							'depth' => 1 ,
-					)); ?>
-				</div>
-
-			</section>
-
-		<?php } ?>
 
 	<?php } ?>
 	
