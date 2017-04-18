@@ -2,3 +2,8 @@
 */.DS_Store
 public/wp-content/uploads/*
 public/wp-config.development.php
+public/wp-content/themes/*/.sass-cache
+.idea/*
+log/*
+public/wp-content/debug.log
+public/wp-content/themes/*/node_modules

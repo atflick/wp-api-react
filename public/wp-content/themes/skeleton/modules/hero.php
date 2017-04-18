@@ -35,10 +35,6 @@
 
 		<div class="flex-container">
 			<div class="flex-col flex-2-3 flex-padding">
-				<?php $terms = wp_get_post_terms($post->ID,'section','');
-				foreach ($terms as $term)
-					echo '<span class="page-section">'.$term->name.'</span>';
-				 ?>
 				<h1 class="hero-title"><?php echo $hero_title; ?></h1>
 				<?php if ($hero_summary) { ?>
 					<h4 class="hero-summary <?php echo $summary_color; ?>"><?php echo $hero_summary; ?></h4>
