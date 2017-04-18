@@ -1,5 +1,4 @@
 # config valid only for Capistrano 3.1
-lock '3.6.1'
 
 set :repo_url, 'git@github.com:nclud/skeleton.git'
 
