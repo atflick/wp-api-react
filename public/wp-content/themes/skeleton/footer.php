@@ -34,7 +34,7 @@
 
 			<div class="footer-links">
 				<div class="flex-container">
-					
+
 					<div class="flex-col flex-1-3 padding-2">
 						<?php while( have_rows('footer_links', 77) ): the_row(); ?>
      						<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('link_text'); ?></a>
@@ -61,7 +61,7 @@
 
 			<div class="footer-locations">
 				<div class="flex-col flex-container">
-					
+
 					<?php while( have_rows('locations', 77) ): the_row(); ?>
 						<div class="flex-col flex-1-3 padding-2">
      						<span class="location-name"><?php the_sub_field('location_name'); ?></span>
@@ -84,17 +84,17 @@
 				<span> All rights reserved</span>
 				<span>Created by <a href="http://nclud.com" target="_blank">nclud</a></span>
 			</div>
-		
+
 		</div>
-		
+
 	</div><!-- .site-info -->
 
 	<?php wp_footer(); ?>
-	
+
 </footer><!-- .site-footer -->
 <script type="text/javascript">
    var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-10970151-3']);
+   _gaq.push(['_setAccount', 'Replace-This']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
