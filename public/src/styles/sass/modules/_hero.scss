@@ -1,0 +1,9 @@
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(tablet) {
+    min-height: 400px;
+  }
+}

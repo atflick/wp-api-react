@@ -1,0 +1,31 @@
+nav.main {
+  padding: 1.5rem unset;
+  .links {
+    a {
+      font-size: 2.2rem;
+      color: $secondary;
+      padding: 0 1rem;
+      margin: 0 2rem;
+      position: relative;
+      &:hover {
+        &:before {
+          width: 100%;
+          border-top: 3px dashed $accent;
+          content: "";
+          height:1px;
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          animation: color-change .7s infinite alternate;
+        }
+
+      }
+    }
+  }
+}
+
+
+@keyframes color-change {
+	from { border-top: 3px dashed $accent; }
+	to { border-top: 3px dashed $primary; }
+}

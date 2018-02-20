@@ -1,0 +1,45 @@
+h1 {
+  font-family: $headerfont;
+  font-size: 5rem;
+  color: $primary;
+}
+
+h2 {
+  font-family: $secondaryfont;
+  font-weight: 600;
+  font-size: 4rem;
+
+}
+
+h3 {
+  font-family: $secondaryfont;
+  font-size: 3.8rem;
+}
+
+h4 {
+  font-family: $secondaryfont;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: $headerfont;
+  font-size: 2.8rem;
+}
+
+h6 {
+  font-family: $secondaryfont;
+  font-size: 2rem;
+}
+
+p {
+  font-family: $secondaryfont;
+  font-size: 1.8rem;
+  color: $bgdark;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+}

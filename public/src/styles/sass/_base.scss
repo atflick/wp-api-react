@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  font-family: $secondaryfont;
+}
+
+html {
+  font-size: 62.5%;
+  @include breakpoint(verylarge) {
+    font-size: 70%;
+  }
+  @include breakpoint(tablet) {
+    font-size: 58%;
+  }
+  @include breakpoint(mobile) {
+    font-size: 53%;
+  }
+}
+
+body {
+ background: $bgwhite;
+}
