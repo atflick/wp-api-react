@@ -7,7 +7,7 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
-const appUrl = 'http://wpreact.dev'
+const appUrl = 'http://dev.wpreact.com'
 
 class Header extends Component {
   constructor(props) {

@@ -23,9 +23,9 @@ class Hero extends Component {
     let bgSize = this.props.data.pattern ? '' : 'cover'
     const secStyle = {
       background: ` url(${this.props.data.image}) center ${pattern}`,
-      backgroundSize:
+      backgroundSize: bgSize,
     }
-console.log(this.props);
+
       return (
           <section className={`${this.props.data.select_module.toLowerCase()} `} style={secStyle}>
 

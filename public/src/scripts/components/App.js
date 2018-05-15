@@ -1,5 +1,6 @@
 import Templater from './Templater.js'
 import Header from './Header.js'
+import Footer from './Footer.js'
 import React, { Component } from 'react';
 import axios from 'axios';
 import {
@@ -10,7 +11,7 @@ import {
   Switch
 } from 'react-router-dom';
 require('./../../styles/sass/style.scss');
-const appUrl = 'http://wpreact.dev'
+const appUrl = 'http://dev.wpreact.com'
 const endPoint = `${appUrl}/wp-json/wp/v2/`
 const postTypes = ['posts', 'recipes']
 
@@ -35,6 +36,10 @@ class App extends Component {
   buildRoutes(data){
     return data.map((page, i) => {
       let path = `${page.link.replace(appUrl, '')}:slug?`
+      console.log(path)
+      if(path.includes('home')) {
+        path = '/'
+      }
       return(
         <Route
           key={i}
@@ -58,6 +63,7 @@ class App extends Component {
                 {this.state.routes}
               </Switch>
             </main>
+          <Footer />
           </div>
         </Router>
       );

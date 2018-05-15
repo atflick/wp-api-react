@@ -1,0 +1,66 @@
+.four_images {
+  h2 {
+    padding: 0 1rem;
+    
+  }
+  .flex-25 {
+    padding: 1rem;
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    .inner {
+      padding-top: 60%;
+      filter: grayscale(100%);
+      transition: .3s ease-in-out;
+      cursor: pointer;
+      
+      &:hover {
+        filter: none;
+      }
+    }
+  }
+  .modal {
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    opacity: 0;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    background: rgba($bgdark, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .inner {
+      height: 60%;
+      width: 60%;
+      position: relative;
+      .close {
+        color: $primary;
+        position: absolute;
+        height: 2.5rem;
+        width:2.5rem;
+        background: $bgwhite;
+        right: 0;
+        top: -2.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    
+    &.active {
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      opacity: 1;
+      
+    }
+  } 
+}

@@ -24,7 +24,7 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 $environments = array(
-	'development' => 'wpreact.dev',
+	'development' => 'dev.wpreact.com',
      'staging' => 'skeleton.nclud.com',
      'production' => 'skeleton.nclud.com',
 );

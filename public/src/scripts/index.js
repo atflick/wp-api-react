@@ -4,7 +4,7 @@ import App                 from 'components/App.js';
 import axios                from 'axios';
 
 
-const appUrl = 'http://wpreact.dev/'
+const appUrl = 'http://dev.wpreact.com/'
 const endPoint = `${appUrl}/wp-json/wp/v2/`
 const postTypes = ['posts', 'recipes']
 

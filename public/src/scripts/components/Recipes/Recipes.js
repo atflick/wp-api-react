@@ -9,8 +9,10 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
-const appUrl = 'http://wpreact.dev/'
+const appUrl = 'http://dev.wpreact.com/'
 const endPoint = `${appUrl}/wp-json/wp/v2/`
+import Global from '../Global.js'
+let global = new Global
 
 class Recipes extends Component {
   constructor(props) {
@@ -41,6 +43,13 @@ class Recipes extends Component {
         })
       } else {
         items = res.data
+        
+        res.data.forEach((item, i) => {
+          global.getImageUrl(item.featured_media, 'medium', (url) => {
+            items[i]['image_src'] = url
+          })
+        })
+        
       }
       this.whichView(items, slug)
     })
@@ -62,7 +71,7 @@ class Recipes extends Component {
 
   render(){
     return (
-      <div>
+      <div className="recipes">
         { this.state.view }
       </div>
     )

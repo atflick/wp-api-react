@@ -15,26 +15,27 @@ let global = new Global
 class RecipeListItem extends Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
-      title: props.recipe.title.rendered,
-      slug: props.recipe.slug,
-      image_link: props.recipe['_links']['wp:featuredmedia'][0].href,
-      image_src: ''
+      
     }
   }
 
-  componentDidMount () {
-    global.getImageUrl(this.props.recipe.featured_media, 'medium', (url) => {
-      this.setState({image_src: url})
-    })
-  }
 
   render() {
+    console.log(this.props.recipe.image_src)
+    const imgStyle = {
+      background: `url(${this.props.recipe.image_src}) no-repeat center / cover`
+    }
+    const recipe = (
+      <Link to={`/recipes/${this.props.recipe.slug}`}>
+        <div style={imgStyle} className="image"><div className="inner"></div></div>
+        <h3>{this.props.recipe.title.rendered}</h3>
+      </Link>
+    )
       return (
-        <div>
-          <h4>Recipe</h4>
-          <Link to={`/recipes/${this.state.slug}`}><h3>{this.state.title}</h3></Link>
-          <img src={this.state.image_src} />
+        <div className="flex-33 recipe-item">
+          {recipe}
         </div>
       );
   }

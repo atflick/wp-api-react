@@ -24,6 +24,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "lodash": "^4.17.4",
+    "node-sass": "^4.9.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"

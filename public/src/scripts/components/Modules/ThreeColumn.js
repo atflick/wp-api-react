@@ -11,7 +11,7 @@ import {
 class ThreeColumn extends Component {
   constructor(props) {
     super(props)
-    console.log('hero loaded');
+    
     this.state = {
 
     }
@@ -19,15 +19,28 @@ class ThreeColumn extends Component {
 
 
   render() {
-    // let allData = DataStore.getAll();
-    // console.log(allData);
+    console.log(this.props)
+    let title = this.props.data.title
+    let content = this.props.data.three_column.map((item, i) => {
+
       return (
-          <div>
-
-              <h2>ThreeColumn</h2>
-
+        <div className="flex-33" key={i}>
+          <div className="inner" dangerouslySetInnerHTML={{__html: item.content}}>
           </div>
-      );
+        </div>
+      )
+    })
+    return ( 
+      <section className="three_column module-padding">
+        <div className="max-width">
+          <h2>{ title }</h2>
+
+          <div className="image-container flex-container">
+            { content }
+          </div>
+        </div>
+      </section>
+    );
   }
 }
 
